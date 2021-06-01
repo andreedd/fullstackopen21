@@ -1,0 +1,20 @@
+title spa
+
+Browser->Server: HTTP Get /spa
+Server-->Browser: HTML Code
+Browser->Server: HTTP Get /main.css
+Server-->Browser: main.css
+Browser->Server: HTTP Get /spa.js
+Server-->Browser: spa.js
+
+note over Browser: 
+browser starts executing js-code
+that requests JSON data from server
+end note
+
+Browser->Server: HTTP Get /data.json
+Server-->Browser: data.json
+
+note over Browser: 
+Browser renders content using event handler
+end note

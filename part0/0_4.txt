@@ -1,0 +1,22 @@
+title new note
+
+Browser->Server: HTTP Post /new_note
+Server-->Browser: HTML Redirect
+Browser->Server: HTTP Get /notes
+Server-->Browser: HTML Code
+Browser->Server: HTTP Get /main.css
+Server-->Browser: main.css
+Browser->Server: HTTP Get /main.js
+Server-->Browser: main.js
+
+note over Browser: 
+browser starts executing js-code
+that requests JSON data from server
+end note
+
+Browser->Server: HTTP Get /data.json
+Server-->Browser: data.json
+
+note over Browser: 
+Browser renders content using event handler
+end note
